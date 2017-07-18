@@ -1,0 +1,225 @@
+//Platinum Hotel
+
+create database Platinum;
+use Platinum;
+	
+
+create table ClientDetails_Platinum(
+CIDP int(5) not null auto_increment,
+ClientName varchar(30) not null,
+Address varchar(100) not null,
+ContactNo int(10) not null,
+InDate date  not null,
+NoOfMembers int(3) not null,
+AC_NOfMem int(3) ,
+AC_NOfRooms int(3) ,
+AC_RoomNo int(3) ,
+NAC_NOfMem int(3) ,
+NAC_NOfRooms int(3) ,
+NAC_RoomNo int(3) , 
+NoOfDays int(5) not null ,
+primary key(CIDP)
+ );
+create table OnlineBooking_Platinum
+ (
+ HotelName varchar(30) not null,
+ InDate date not null,
+ NoOfDays int(5),
+ CIDP int(5),
+ foreign key(CIDP) references ClientDetails_Platinum(CIDP)
+ );
+
+ create table FoodPackage_Platinum
+ (
+ ContactNo int(10) not null,
+ PackageName varchar(30) not null,
+ PackagePrice int(10) not null,
+ NoOfDays int(5) not null ,
+ NoOfMembers int(3) not null,
+ );
+
+ create table CostForRooms_Platinum
+ (HotelName varchar(30) not null,
+ RoomNumbers int(3) not null,
+ RoomCost int(5) not null,
+ Total int(5) not null,
+ CIDP int(5),
+ foreign key(CIDP) references ClientDetails_Platinum(CIDP)
+ );
+
+ create table Payment_Platinum
+ (CIDP int(5),
+ ContactNo int(10) not null,
+ NoOfMembers int(3) not null,
+ NoOfDays int(5),
+ Cost int(5),
+ foreign key(CIDP) references ClientDetails_Platinum(CIDP)
+ );
+
+
+	//Classic Hotel
+
+create database Classic;
+use Classic;
+
+ create table ClientDetails_Classic(
+ CIDC int(5) not null auto_increment,
+ ClientName varchar(30) not null,
+ Address varchar(100) not null,
+ ContactNo int(10) not null,
+ InDate date  not null,
+ NoOfMembers int(3) not null,
+ AC_NOfMem int(3) not null,
+ AC_NOfRooms int(3) not null,
+ AC_RoomNo int(3) not null,
+ NAC_NOfMem int(3) not null,
+ NAC_NOfRooms int(3) not null,
+ NAC_RoomNo int(3) not null, 
+ NoOfDays int(5) ,
+ primary key(CIDC)
+ );
+create table OnlineBooking_Classic
+ (
+ HotelName varchar(30) not null,
+ InDate date not null,
+ NoOfDays int(5),
+ CIDC int(5),
+ foreign key(CIDC) references ClientDetails_Classic(CIDC)
+ );
+
+ create table FoodPackage_Classic
+ (CIDC int(5),
+ ContactNo int(10) not null,
+ PackageNo int(3) not null,
+ foreign key(CIDC) references ClientDetails_Classic(CIDC)
+ );
+
+ create table CostForRooms_Classic
+ (HotelName varchar(30) not null,
+ RoomNumbers int(3) not null,
+ RoomCost int(5) not null,
+ Total int(5) not null,
+ CIDC int(5),
+ foreign key(CIDC) references ClientDetails_Classic(CIDC)
+ );
+
+ create table Payment_Classic
+ (CIDC int(5),
+ ContactNo int(10) not null,
+ NoOfMembers int(3) not null,
+ NoOfDays int(5),
+ Cost int(5),
+ foreign key(CIDC) references ClientDetails_Classic(CIDC)
+ );
+
+	//Bird View Hotel
+
+create database BirdView;
+use BirdView;
+
+ create table ClientDetails_BirdView(
+ CIDBV int(5) not null auto_increment,
+ ClientName varchar(30) not null,
+ Address varchar(100) not null,
+ ContactNo int(10) not null,
+ InDate date  not null,
+ NoOfMembers int(3) not null,
+ AC_NOfMem int(3) not null,
+ AC_NOfRooms int(3) not null,
+ AC_RoomNo int(3) not null,
+ NAC_NOfMem int(3) not null,
+ NAC_NOfRooms int(3) not null,
+ NAC_RoomNo int(3) not null, 
+ NoOfDays int(5) ,
+ primary key(CIDBV)
+ );
+create table OnlineBooking_BirdView
+ (
+ HotelName varchar(30) not null,
+ InDate date not null,
+ NoOfDays int(5),
+ CIDBV int(5),
+ foreign key(CIDBV) references ClientDetails_BirdView(CIDBV)
+ );
+
+ create table FoodPackage_BirdView
+ (CIDBV int(5),
+ ContactNo int(10) not null,
+ PackageNo int(3) not null,
+ foreign key(CIDBV) references ClientDetails_BirdView(CIDBV)
+ );
+
+ create table CostForRooms_BirdView
+ (HotelName varchar(30) not null,
+ RoomNumbers int(3) not null,
+ RoomCost int(5) not null,
+ Total int(5) not null,
+ CIDBV int(5),
+ foreign key(CIDBV) references ClientDetails_BirdView(CIDBV)
+ );
+
+ create table Payment_BirdView
+ (CIDBV int(5),
+ ContactNo int(10) not null,
+ NoOfMembers int(3) not null,
+ NoOfDays int(5),
+ Cost int(5),
+ foreign key(CIDBV) references ClientDetails_BirdView(CIDBV)
+ );
+
+
+	//Beach Park Hotel
+
+create database BeachPark;
+use BeachPark;
+
+ create table ClientDetails_BeachPark(
+ CIDBP int(5) not null auto_increment,
+ ClientName varchar(30) not null,
+ Address varchar(100) not null,
+ ContactNo int(10) not null,
+ InDate date  not null,
+ NoOfMembers int(3) not null,
+ AC_NOfMem int(3) not null,
+ AC_NOfRooms int(3) not null,
+ AC_RoomNo int(3) not null,
+ NAC_NOfMem int(3) not null,
+ NAC_NOfRooms int(3) not null,
+ NAC_RoomNo int(3) not null, 
+ NoOfDays int(5) ,
+ primary key(CIDBP)
+ );
+create table OnlineBooking_BeachPark
+ (
+ HotelName varchar(30) not null,
+ InDate date not null,
+ NoOfDays int(5),
+ CIDBP int(5),
+ foreign key(CIDBP) references ClientDetails_BeachPark(CIDBP)
+ );
+
+ create table FoodPackage_BeachPark
+ (CIDBP int(5),
+ ContactNo int(10) not null,
+ PackageNo int(3) not null,
+ foreign key(CIDBP) references ClientDetails_BirdView(CIDBP)
+ );
+
+ create table CostForRooms_BeachPark
+ (HotelName varchar(30) not null,
+ RoomNumbers int(3) not null,
+ RoomCost int(5) not null,
+ Total int(5) not null,
+ CIDBP int(5),
+ foreign key(CIDBP) references ClientDetails_BeachPark(CIDBP)
+ );
+
+ create table Payment_BeachPark
+ (CIDBP int(5),
+ ContactNo int(10) not null,
+ NoOfMembers int(3) not null,
+ NoOfDays int(5),
+ Cost int(5),
+ foreign key(CIDBP) references ClientDetails_BeachPark(CIDBP)
+ );
+

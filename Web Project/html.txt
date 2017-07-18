@@ -1,0 +1,13 @@
+<html>
+<head>FoodPackage</head>
+<body>
+	<form action="Platinum" method="get">
+	Contact No<input type="text" name="t1"><br>
+	Package Name<input type="text" name="t2"><br>
+	<input type="submit" name="b1" value="Submit">
+	
+	
+	</form>
+</body>
+
+</html>

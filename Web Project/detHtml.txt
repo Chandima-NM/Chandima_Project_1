@@ -1,0 +1,13 @@
+<html>
+<head>FoodPackagedet</head>
+<body>
+	<form action="Colombodet3" method="get">
+	Contact No<input type="text" name="t1"><br>
+	
+	<input type="submit" name="b1" value="Submit">
+	
+	
+	</form>
+</body>
+
+</html>

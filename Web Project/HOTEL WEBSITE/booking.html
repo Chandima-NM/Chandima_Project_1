@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>booking</title>
+
+<link rel="stylesheet" type="text/css" href="css/booking.css" >
+
+
+<script type="text/javascript">
+
+function one()
+{
+with (document.form1)
+{rcost.value = + acr.value*days.value*20 + nacr.value*days.value*10};
+
+//with (document.form1)
+//{mcost.value = +members.value*mdays.value*days.value*me.value};
+
+with (document.form1)
+{total.value =  acr.value*days.value*20 + nacr.value*days.value*10 
+    //+members.value*mdays.value*days.value*me.value
+};
+
+{var x = document.getElementById("name").value;
+    document.getElementById("nfield").innerHTML = x;}
+
+
+ 
+    {var y = document.getElementById("idate").value;
+    document.getElementById("showdate").innerHTML = y;}
+
+{var z = document.getElementById("title").value;
+    document.getElementById("showtitle").innerHTML = z;}
+
+{var rx = document.getElementById("hname").value;
+    document.getElementById("hotel_name").value = rx;}
+
+
+
+{
+    var ac = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < ac.length; i++) {
+        if (ac[i].checked) {
+            txt = txt + ac[i].value + " ";
+        }
+    }
+    document.getElementById("order").value = "Room No.: " + txt;
+}
+
+
+
+
+
+
+
+
+
+/*ERROR CORRECTIONS*/
+var totalmem=parseInt(document.getElementById("members").value);
+var acmem=parseInt(document.getElementById("acr").value);
+var nacmem=parseInt(document.getElementById("nacr").value);
+
+var s=acmem+nacmem;
+if(totalmem==s)
+{}
+else
+{
+	alert("ERROR..!Totel members & room members are not matched!");
+	}	
+	
+
+}
+
+
+
+
+
+
+function getac()
+ {
+
+
+var g=document.getElementById("acr").value;
+    document.getElementById("gets").innerHTML = Math.ceil(g/5);
+
+}
+
+function getnac()
+ {
+
+
+var h=document.getElementById("nacr").value;
+    document.getElementById("gets2").innerHTML = Math.ceil(h/5);
+
+}
+
+
+</script>
+
+</head>
+
+<body bgcolor="#99FFFF"  background="LOGOS/back.jpg">
+
+<table width="100%" align="center" >
+<tr><td >
+
+<table class="main_table" align="center" >
+<tr><td width="950px" bgcolor="#FFFFFF" background="LOGOS/back table.png">
+
+<div id="nav">
+	<a href="home.html"><img src="NAVIGATION/home.jpg" height="80" width="auto" id=""  onmousemove="src='NAVIGATION/home select.jpg'" onmouseout="src='NAVIGATION/home.jpg'"/></a>
+    
+    
+   <a href="hotels.html"> <img src="NAVIGATION/services.jpg" height="80" width="auto" id="story" onmousemove="src='NAVIGATION/services select.jpg'" onmouseout="src='NAVIGATION/services.jpg'"  /></a>
+    
+    
+   
+    
+    
+   <a href="booking.html"> <img src="NAVIGATION/booking select.jpg" height="80" width="auto" id="blogs"/></a>
+    
+    
+  <a href="contact.html">  <img src="NAVIGATION/contact.jpg"  height="80" width="auto" id="comments" onmousemove="src='NAVIGATION/contact select.jpg'" onmouseout="src='NAVIGATION/contact.jpg'"/></a></div>
+
+
+<div id="body">
+<p align="center"><font color="#333333" size="60px">ONLINE ROOM RESERVATION</font></p>
+<hr />
+<p align="center" id="name1"><font  color="" face="Mistral">EAGLE HEAD HOTELS</font></p>
+<hr />
+
+
+<table align="center" width="650px" border="1px">
+<tr><td bgcolor="">
+
+
+<p align="center"><font color="#990000" face="ForteForte" size="30px">EAGLE HEAD HOTELS</font></p>
+<p align="center">(ROOM RESERVATION SYSTEM)</p>
+<form name="form1" action="form_action.asp">
+<table align="center" >
+<tr height="50px">
+<td ><strong>Client Name:-</strong></td><td align="right"> <input type="text" id="name"></td>
+
+
+</tr>
+<tr><td><strong>Title:-</strong></td><td align="right"><select name="" id="title">
+<option  value="Mr." >Mr.</option>
+<option  value="Mrs.">Mrs. </option>
+<option  value="Ms.">Ms. </option>
+</select></td></tr>
+<tr height="50px">
+<td><strong>Address:-</strong></td><td align="right"> <input type="text" id="add"></td>
+
+
+</tr><tr height="50px">
+<td><strong>Contact No:-</strong></td><td align="right"><input type="text" id="tp"></td>
+
+
+</tr><tr height="50px">
+<td><strong>In date:-</strong></td><td align="right"><input type="date" id="idate"></td>
+
+
+<tr><td><strong>Hotel Name:-</strong></td><td align="right"><select name="" id="hname">
+<option  value="" >--SELECT--</option>
+<option  value="Eagle Head - Platinum (Colombo)" >Eagle Head - Platinum (Colombo)</option>
+<option  value="Eagle Head - Classic (Anuradhapura)">Eagle Head - Classic (Anuradhapura) </option>
+<option  value="Eagle Head - Beach Park (Negambo)">Eagle Head - Beach Park (Negambo) </option>
+<option  value="Eagle Head - Mountain View (Nuwara Eliya">Eagle Head - Mountain View (Nuwara Eliya) </option>
+</select></td></tr>
+
+
+</tr><tr height="50px">
+<td><strong>No of members:-</strong></td><td align="right"><input type="text" id="members"></td>
+
+
+</tr>
+
+
+</tr><tr height="50">
+<td><strong>A/C (no of members)[20$]:-</strong></td><td>
+<table><tr>
+<td ><input type="text" id="acr" size="3px" ></td><td><input type="button" onClick=getac() value="No of Rooms"></td><td width="117px" height="20px" bgcolor="#33FF66"><b><p id="gets" ></p></b></td>
+</tr></table>
+
+</td></tr>
+<tr><td>
+
+<strong>Select Room No (A/C):-</strong><br />(5 members for each)</td><td>1<input type="checkbox" value="1(A/C)," name="ac">2<input type="checkbox" value="2(A/C),"  name="ac">3<input type="checkbox" value="3(A/C),">4<input type="checkbox" value="4(A/C)," name="ac">5<input type="checkbox" value="5(A/C)," name="ac">6<input type="checkbox" value="6(A/C)," name="ac">7<input type="checkbox" value="7(A/C)," name="ac">8<input type="checkbox" value="8(A/C)," name="ac">
+
+
+</td><tr><td height="30px"></td></tr></tr>
+<tr height="50px">
+<td align="left" height=""><strong>Non A/C (no of members)[10$]:-</strong><br />(5 members for each)</td><td>
+
+
+<table><tr>
+
+<td><input type="text" id="nacr" size="3px"></td><td><input type="button" onClick=getnac() value="No of Rooms"></td><td width="117px" height="20px" bgcolor="#33FF66"><b><p id="gets2" ></p></b></td>
+</tr></table>
+
+
+</td>
+<tr><td>
+<strong>Select Room No:-</strong></td><td>9<input type="checkbox" value="9," name="nac">10<input type="checkbox" value="10" name="nac">11<input type="checkbox" value="11," name="nac">12<input type="checkbox" value="12," name="nac">13<input type="checkbox" value="13," name="nac">14<input type="checkbox" value="14," name="nac">15<input type="checkbox" value="15," name="nac">16<input type="checkbox" value="16," name="nac"></td>
+
+
+</tr>
+
+
+
+
+
+<tr height="50px">
+<td><strong>No of days:-</strong></td><td align="right"><input type="text" id="days"></td>
+
+
+</tr>
+
+
+
+
+<tr height="50px">
+<td align="right"><input type="button" value="submit" onclick=one() ></td><td align=""><input type="reset" value="reset" ></td>
+
+</tr></table>
+
+</td></tr>
+</table>
+
+</form>
+<br><br><br><br>
+
+
+
+<form>
+<table align="center" width="500px" border="1px" background="img/i2.jpg" >
+<tr><td width="250px">
+
+<p align="center"><font face="Verdana, Geneva, sans-serif" size="5px">Cost for rooms</font></p>
+
+
+<table><tr>
+
+<td></td><td ><b><p id="showtitle"></p></b></td><td width="300px"><b><font face="Adobe Garamond Pro Bold" id="nfield" size="4px">&nbsp;</font></font>
+</td><td align="right">Date:-</td><td align="right"><p id="showdate"></p></td>
+
+</tr></table>
+
+
+
+
+<table width="500px">
+
+
+<tr height="50px">
+<td>Hotel Name :-</td><td align="center"><hr><input type="text" id="hotel_name"  size="40px"><hr /></td>
+</tr>
+
+<tr>
+<td width="250px">Room Numbers:-</td><td width="250px"><input type="text" id="order" size="40px"></td>
+</tr></table>
+
+
+<table align="center" width="500px">
+<!--<tr><td>A/C room No:-<p id="showac"></p></td>  <td>A/C room No:-</td></tr>--><!--room numbers-->
+<tr><td>
+
+</tr><tr height="50px">
+<td>Room cost :-</td><td align="center"><hr><input type="text" id="rcost"  ></td>
+</tr>
+</tr>
+
+
+<!--
+<tr height="50px">
+<td>Meal cost :-</td><td align="center"><input type="text" id="mcost" ></td>
+</tr>
+-->
+
+</tr><tr height="50px">
+<td><b>TOTAL ($) :-</b></td><td align="center"><hr><input type="text" id="total" >
+</td>
+
+
+</tr>
+<tr><td align="center" colspan="2"><p align="center"><font face="Informal Roman" size="6px">Thank you...! </font></p><p align="right"></p></td></tr>
+</table>
+
+
+
+
+
+
+</td></td>
+</table>
+
+
+</form>
+
+
+<div align="center">
+<br />
+<a href="www.facebook.com"><img src="img/social links/1.png"  width="70" /></a>
+
+<a href="www.twitter.com"><img src="img/social links/2.png"  width="70" /></a>
+
+<a href="www.google.com"><img src="img/social links/3.png"  width="70" /></a>
+
+<a href="www.instragram.com"><img src="img/social links/4.png"  width="70" /></a>
+
+</div>
+
+
+
+
+</td></tr></table>
+</td></tr></table>
+
+
+
+
+
+
+</body>
+</html>

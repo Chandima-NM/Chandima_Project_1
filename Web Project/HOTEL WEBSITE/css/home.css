@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*navigation*/
+
+#nav  {
+	display: block;
+	list-style-type:none;
+	margin-top:100px;
+	font-size: 15px;
+	background: #000;
+	width:80px ;
+	color: #fff;
+	text-align:center;
+	text-decoration: none;
+	position:fixed;
+	
+	}
+	
+#name{
+	text-shadow:#666;
+	text-shadow:3px 5px 20px;
+	font-size:50px;
+	margin-top:3px;
+	margin-bottom:3px;
+	}
+	
+#body{
+	float:right;
+	height:2300px;
+	width:800px	;
+	margin-top:16px;
+	margin-right:20px;
+	margin-left:20px;
+	border:#FFF;
+	border-radius:10px;
+	}
+	
+#prof_pic{
+	float:left;
+	background-image:url(LOGOS/back%20color.png);
+	padding-bottom:10px;
+	border-radius:25px;
+	}
+	
+
+
+	
+
+	
+	#t1{
+	margin-top:3px;
+	}
+
+/*DETAILS HEDDINGS*/
+#hed{
+	text-shadow:1px 2px 5px;
+	font-size:22px;
+	color:#333;
+	font-family:Estrangelo Edessa;
+	margin:-2px;
+	
+	}
+
+/*DETAILS DESCRIPTIONS	*/
+#det{
+	font-size:20px;
+	color:#666;
+	font-family:Estrangelo Edessa;
+	margin:;
+	
+	}
+	
+#about_hotel{
+	float:right;
+	height:550px;
+	width:800px;
+	margin-top:30px;
+	background-image:url(LOGOS/back%20color.png);
+	border-radius:25px;
+	padding-left:10px;
+	padding-left:10px;
+	}
+	#abo{
+	
+	}
+	
+#comment{
+	float:right;
+	height:300px;
+	width:800px;
+	margin-top:30px;
+
+	}
+	
+/*VISION AND MISSION*/
+#vmhed{
+	font-size:26px;
+	font-family:Estrangelo Edessa;
+	color:#FFF;
+	text-align:center;
+	
+	margin-left:30px;
+	}
+	
+#vm{
+	padding:10px;
+}
+	
+/*INTEREST TABLE	*/
+#interest{
+	float:right;
+	height:300px;
+	width:800px;
+	margin-top:30px;
+	
+	}
+/*IMAGES OF INTEREST	*/
+#i{
+	margin-left:25px;
+	}
+	
+/*HEDDING TEXT OF INTEREST	*/	
+#t{
+	font-size:22px;
+	font-family:Estrangelo Edessa;
+	}
+	
+.main_table{
+	border:solid;
+	border-color:#FFF;
+	border-radius:8px;
+	}	
+	
+	
+/*ANIMATIONS*/
+	
+	
+.h1 {  
+    -webkit-animation-duration: 2s;  
+    -webkit-animation-delay: 0s;  
+    -webkit-animation-iteration-count:1;  
+}  	
+
+.h2 {  
+    -webkit-animation-duration: 2s;  
+    -webkit-animation-delay: 0.2s;  
+    -webkit-animation-iteration-count:1;  
+}  	
+
+.h3 {  
+    -webkit-animation-duration: 2s;  
+    -webkit-animation-delay: 0.4s;  
+    -webkit-animation-iteration-count:1;  
+}  	
+
+.h4 {  
+    -webkit-animation-duration: 2s;  
+    -webkit-animation-delay: 0.6s;  
+    -webkit-animation-iteration-count:1;  
+}  	
+
+.d1 {  
+    -webkit-animation-duration: 4s;  
+    -webkit-animation-delay: 0.4s;  
+    -webkit-animation-iteration-count:1; 
+	padding-bottom:10px;
+	padding-left:10px;
+	
+}  	
+
+.d2 {  
+    -webkit-animation-duration: 4s;  
+    -webkit-animation-delay: 0.6s;  
+    -webkit-animation-iteration-count:1;  
+	padding-bottom:10px;
+	padding-left:80px;
+}  
+
+.d3 {  
+    -webkit-animation-duration: 4s;  
+    -webkit-animation-delay: 0.8s;  
+    -webkit-animation-iteration-count:1;
+	padding-bottom:10px; 
+	padding-left:160px; 
+}  
+
+.d4 {  
+    -webkit-animation-duration: 4s;  
+    -webkit-animation-delay: 1s;  
+    -webkit-animation-iteration-count:1;  
+	padding-bottom:10px;
+	padding-left:240px;
+}  
+
+.f1 {  
+    -webkit-animation-duration: 2s;  
+    -webkit-animation-delay: 1s;  
+    -webkit-animation-iteration-count:1;  
+}  

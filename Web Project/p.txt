@@ -1,0 +1,15 @@
+btnLogin.addActionListener(new ActionListener() 
+{
+    public void actionPerformed(ActionEvent e) {
+        this.setVisible(false);
+        new FrmMain().setVisible(true); // Main Form to show after the Login Form..
+    }
+});
+
+
+
+CREATE TABLE animals (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     name CHAR(30) NOT NULL,
+     PRIMARY KEY (id)
+);

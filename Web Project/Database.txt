@@ -1,0 +1,47 @@
+create database Platinum;
+use Platinum;
+
+ create table FoodPackage_Platinum
+  (
+  ContactNo int(10) not null,
+  PackageName varchar(30) not null,
+  PackagePrice int(10) not null,
+  NoOfDays int(5) not null ,
+  NoOfMembers int(3) not null
+ );
+
+create database Classic;
+use Classic;
+
+ create table FoodPackage_Classic
+  (
+  ContactNo int(10) not null,
+  PackageName varchar(30) not null,
+  PackagePrice int(10) not null,
+  NoOfDays int(5) not null ,
+  NoOfMembers int(3) not null
+ );
+
+create database BirdView;
+use BirdView;
+
+ create table FoodPackage_BirdView
+  (
+  ContactNo int(10) not null,
+  PackageName varchar(30) not null,
+  PackagePrice int(10) not null,
+  NoOfDays int(5) not null ,
+  NoOfMembers int(3) not null
+ );
+
+create database BeachPark;
+use BeachPark;
+
+ create table FoodPackage_BeachPark
+  (
+  ContactNo int(10) not null,
+  PackageName varchar(30) not null,
+  PackagePrice int(10) not null,
+  NoOfDays int(5) not null ,
+  NoOfMembers int(3) not null
+ );

@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+#title{
+	width:950px;
+	height:30px;
+	font-family:Felix Titling;
+	font-size:25px;
+	margin-top:12px;
+	}
+	
+#body{
+	float:right;
+	height:3100px;
+	width:950px	;
+	margin-top:16px;
+	margin-right:20px;
+	margin-left:20px
+	}
+	
+#display{
+	position:fixed;
+	width:600px;
+	margin-top:30px;
+	border:10px;
+	border-style:groove;
+	box-shadow:12px 12px 12px;
+	}
+	
+#photo_line{
+	width:300px;
+	height:500px;
+	float:right;
+	margin-top:30px;
+	}
+#photos{
+	width:280px;
+	margin-bottom:20px;
+	
+	}
+	
+#photos:hover{
+	width:300px;
+	border:2px;
+	box-shadow:10px 10px 10px #000000;
+	}
+	
